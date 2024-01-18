@@ -1,0 +1,910 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+html::-webkit-scrollbar {
+    background: black;
+    width: 1.75vw;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(44, 44, 44);
+    border-radius: 20px;
+    border: 7px solid rgb(34, 34, 34);
+}
+html::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(39, 39, 39);
+    border-radius: 20px;
+    border: 7px solid rgb(31, 31, 31);
+}
+html::-webkit-scrollbar-thumb:active{
+    background-color: rgb(34, 34, 34);
+    border-radius: 20px;
+    border: 7px solid rgb(29, 29, 29);
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes transitionIn2 {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+        transform: translateY(-50%);
+    }
+}
+
+.calendly-button{
+    display: inline-block;
+    font-size: 18px;
+    background: transparent;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-right: 100px;
+    animation: transitionIn 4s;
+}
+
+.calendly-button:hover, .calendly-button2:hover{
+    background-image: url("images/scroll.jpg");
+    text-decoration: underline;
+    border: 3px solid white;
+    padding: 18px;
+}
+
+.calendly-button:active, .calendly-button2:active{
+    color: black;
+    background: white;
+    border: 3px solid black;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: 65px;
+    margin-right: auto;
+    animation: transitionIn 4s;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+}
+
+
+.astroid img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+
+.astroid{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble{
+    0%{
+        transform: translateY(0) ;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh) ;
+        opacity: 0;
+    }
+}
+
+.astroid img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.astroid img:nth-child(2){
+    animation-delay: 1s;
+}
+.astroid img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.astroid img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.astroid img:nth-child(5){
+    animation-delay: 3s;
+}
+.astroid img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.astroid img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+
+}
+
+.calendly-button2 {
+    font-size: 18px;
+    background: transparent;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.content{
+    animation: transitionIn2 5s;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    z-index: 2;
+    margin-top: 0px;
+    transform: translateY(-50%);
+}
+
+h1{
+    font-size: 70px;  
+    line-height: 2;
+}
+
+.web-h1{
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+.header {
+    list-style: none;
+    display: flex;
+}
+
+.side-bar {
+    width: 50px;
+    height: 100vh;
+    background: linear-gradient(rgb(20, 20, 20), black);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 5px solid linear-gradient(rgb(44, 44, 44), black);
+    border-right: 3px solid rgb(44, 44, 44);
+    animation: transitionIn 3s;
+    margin-right: 7px;
+}
+
+.menu{
+    display: block;
+    width: 25px;
+    margin: 40px auto 0;
+}
+
+.social-links img{
+    width: 40px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.small-links img{
+    width: 55px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.useful-links img{
+    width: 40px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.social-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.small-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.useful-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/saturn.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home2{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/uranus.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.homep{
+    display: none;
+    width: 100%;
+    height: 60vh;
+    background-image: url("images/saturn.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.home2p{
+    display: none;
+    width: 100%;
+    height: 60vh;
+    background-image: url("images/saturn.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.herop{
+    display: none;
+    width: 100%;
+    height: 60vh;
+    background-image: url("images/saturn.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.para{
+    display: none;
+    background-color: black;
+    color: #ffffff;
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cal{
+    display: none;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.cal2{
+    background: black;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.cal2 .calendly-inline-widget{
+    width: 700px;
+    top: 10%;
+    left: 15%;
+}
+
+.cal2 .content3{
+    left: 60%;
+}
+.cal2 .content3 h2{
+    color: royalblue;
+}
+
+.footer{
+    background: #141414;
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid #444;
+    color: white;
+}
+
+
+.footerlogo{
+    position: absolute;
+    width: 260px;
+    height: 245px;
+    top: 20%;
+    left: 80%;
+}
+
+.footer a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover{
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(180, 179, 179);
+    text-decoration: underline;
+}
+.footer h1{
+    margin-right: 10px;
+    font-size: 50px;
+}
+.footer .column1{
+    position: absolute;
+    left: 45%;
+    top: 10%;
+}
+.footer .column2{
+    position: absolute;
+    left: 15%;
+    top: 10%;
+}
+
+.linksp p{
+    display: none;
+}
+
+.footer p{
+    position: absolute;
+    bottom: 2%;
+    font-size: 15px;
+    left: 5%;
+}
+
+.row{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+.row1{
+    position: absolute;
+    top: 55%;
+    left: 20%;
+}
+.row2{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+
+
+.row3{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+.row4{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+}
+.row5{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .logo{
+        width: 120px;
+        height: 100px;
+        visibility: collapse;
+    }
+    .hero{
+        background-image: url("images/backgrounds2.png"); 
+    }
+    .home2{
+        background-image: url("images/uranus2.png");
+    }
+    .home{
+        background-image: url("images/saturn2.png");
+    }
+    .home2p{
+        visibility: visible;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .para{
+        visibility: visible;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .linksp{
+        visibility: visible;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .linksp img{
+        position:absolute;
+        top: 10%;
+        width: 90px;
+        height: 80px;
+    }
+    .footer a{
+        display: none;
+    }
+    .footer h1{
+        display: none;
+    }
+    .footer{
+        background-image: url("images/darkblack.jpg");
+        height: 10vh;
+        border: none;
+        border-top: 2px solid #444;
+    }
+    .footer p{
+        position: absolute;
+        bottom: 50%;
+        top: 50%;
+    }
+    .herop{
+        visibility: visible;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homep{
+        visibility: visible;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .websitep{
+        width: 350px;
+        height: 350px;
+        
+    }
+
+    .codingp{
+        width: 400px;
+        height: 400px;
+    }
+
+    .logop{
+        width: 300px;
+        height: 290px;
+    }
+
+    .test{
+        visibility: collapse;
+    }
+    .test2{
+        visibility: collapse;
+    }
+    .iphone{
+        visibility: collapse;
+    }
+    .calendly-button{
+        margin-right: 20px;
+        padding-top: 20px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .web-h1{
+        margin-top: -20px;
+    }
+
+    .side-bar {
+        width: 100%;
+        height: 50px;
+        top: 0;
+        bottom: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+        border-bottom: 3px solid WHITE;
+        border-left: 0px;
+        background-image: url("images/scroll.jpg");
+        margin-right: 0px;
+        border-right: none;
+        background: black;
+        visibility: collapse;
+    }
+    .social-links{
+        width: auto;
+        position: unset;
+        transform: none;
+    }
+    .small-links{
+        width: auto;
+        position: unset;
+        transform: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .instagram{
+        margin-bottom: 5px;
+    }
+
+    .useful-links{
+        width: auto;
+        position: unset;
+    }
+    .menu{
+        width: 18px;
+        margin: 0;
+    }
+    .social-links img, .useful-links img{
+        width: 30px;
+        margin-right: 5px;
+    }
+
+    .htmll{
+        visibility: collapse;
+    }
+    .html{
+        visibility: collapse;
+    }
+    .css{
+        visibility: collapse;
+    }
+    .cssl{
+        visibility: collapse;
+    }
+
+    .content3 h3{
+        font-size: 16px;
+ 
+    }
+    .para{
+        visibility: visible;
+    }
+    .cal{
+        visibility: visible;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cal2{
+        display: none;
+    }
+    .content3{
+        animation: transitionIn2 6s;
+        color: #ffffff;
+        position: absolute;
+        z-index: 2;
+        top: 35%;
+        left: 8%;
+        right: 8%;
+        margin-top: 100px;
+        transform: translateY(-50%);
+        margin-left: auto; 
+    }
+    .column1{
+        visibility: collapse;
+    }
+    .column2{
+        visibility: collapse;
+    }
+    .footerlogo{
+        visibility: collapse;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px){
+
+}
+
+.htmll{
+    color: white;
+    border-radius: 10%;
+    position:absolute;
+    top: 35%;
+    left: 49%;
+    transform: translateY(-50%);
+    width: 450px;
+    animation: transitionIn2 7s;
+    z-index: 2;
+}
+
+.html{
+    color: white;
+    border-radius: 10%;
+    position:absolute;
+    top: 35%;
+    left: 70%;
+    transform: translateY(-50%);
+    width: 400px;
+    background: transparent;
+    z-index: 2;
+    border: 3px solid rgb(44, 44, 44);
+}
+.cssl{
+    color: white;
+    border-radius: 10%;
+    position:absolute;
+    top: 65%;
+    left: 72%;
+    transform: translateY(-50%);
+    width: 200px;
+    animation: transitionIn2 8s;
+    z-index: 2;
+}
+
+.css{
+    color: white;
+    border-radius: 10%;
+    position:absolute;
+    top: 65%;
+    left: 54%;
+    transform: translateY(-50%);
+    width: 250px;
+    z-index: 2;
+    border: 3px solid rgb(44, 44, 44);
+}
+
+.content2 {
+    animation: transitionIn2 6s;
+    color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 10%;
+    margin-top: 100px;
+    transform: translateY(-50%);
+}
+.astroid2 img{
+    width: 50px;
+    animation: bubble2 7s linear infinite;
+}
+
+.astroid2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble2{
+    0%{
+        transform: translateY(-80vh) ;
+        transform: translateX(1);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        transform: translateX(100vh);
+        opacity: 0;
+    }
+}
+
+.astroid2 img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.astroid2 img:nth-child(2){
+    animation-delay: 1s;
+}
+.astroid2 img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.astroid2 img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.astroid2 img:nth-child(5){
+    animation-delay: 3s;
+}
+.astroid2 img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.astroid2 img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+
+}
+
+.facebook img{
+    width: 300px;
+}
+
+.content3 {
+    animation: transitionIn2 6s;
+    color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 8%;
+    margin-top: 100px;
+    transform: translateY(-50%);
+    margin-left: auto;            
+}
+
+.learnmore-button{
+    display: inline-block;
+    font-size: 18px;
+    background: transparent;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 60px;
+    margin-right: 100px;
+    animation: transitionIn 4s;
+}
+
+.learnmore-button:hover{
+    background-image: url("images/scroll.jpg");
+    text-decoration: underline;
+    border: 3px solid white;
+    padding: 18px;
+}
+
+.learnmore-button:active{
+    color: black;
+    background: white;
+    border: 3px solid black;
+    text-decoration: none;
+}
+
+.iphone{
+    color: white;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 900px;
+    background: transparent;
+    animation: transitionIn2 7s;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.astroid3 img{
+    width: 50px;
+    animation: bubble3 7s linear infinite;
+}
+
+.astroid3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble3{
+    0%{
+        transform: translateY(-80vh);
+        transform: translateX(1);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        transform: translateX(-100vh);
+        opacity: 0;
+    }
+}
+
+.astroid3 img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.astroid3 img:nth-child(2){
+    animation-delay: 1s;
+}
+.astroid3 img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.astroid3 img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.astroid3 img:nth-child(5){
+    animation-delay: 3s;
+}
+.astroid3 img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.astroid3 img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+
+}
+
+.para h2{
+    color: rgb(43, 107, 247);
+}
